@@ -86,48 +86,28 @@
     min-height: 100vh;
     background-color: #1a1a1a;
     color: #e0e0e0;
-    padding: 40px 0;
+    padding: 25px 0;
+}
+.main-section h1{
+   
+ font-family: "Dancing Script", cursive;
+ padding: 20px;
 }
 
 
 
 /* .early-sec Section */
-.early-sec {
-    width: 45%;
-    background-color: #2c2c2c;
-    border: 1px solid #444;
-    padding: 30px;
-    border-radius: 15px;
-    margin-top: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.early-sec p {
-    text-align: center;
-    color: #fffcfc;
-}
-
-.early-sec p {
-    font-size: 20px;
-}
-
-.early-sec h2 {
-    text-align: center;
-    font-family: "Dancing Script", cursive;
-}
-
 .bio-sec {
     display: flex;
     justify-content: center;
     gap: 45px;
 }
-.bio-sec h1{
-   
- font-family: "Dancing Script", cursive;
-}
 
 .bio-sec img {
-    width: 280px;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    height: 350px;
     border-radius: 20px;
     border: solid rgb(0, 0, 0);
 
@@ -139,8 +119,40 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 
 
 
 }
+.bio-sec .caption {
+    font-size: 14px;
+    font-style: italic;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+
+.bio-text {
+    width: 45%;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.bio-text p {
+    text-align: center;
+    color: #fffcfc;
+       font-size: 20px;
+      margin: 10px;
+}
+.bio-text h2 {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+     padding: 10px;
+}
+
+
+
