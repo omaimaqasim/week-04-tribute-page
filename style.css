@@ -177,6 +177,43 @@ footer p span {
     font-weight: bold;
     font-family: cursive;
 }
+h1{
+        font-family: "Dancing Script", cursive;
+}
+
+/* works section */
+.work-sec{
+    border: solid yellow;
+    height: 100vh;
+    padding: 20px;
+    background-color: #101010;
+}
+.work-sec h1{
+    text-align: center;
+     color: rgb(240, 206, 9);
+     font-size: 42px;
+}
+.works{
+    border: solid yellow;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+}
+.item h3, .content h2{
+    color: rgb(240, 206, 9);
+}
+.content h2{
+    font-family: "Dancing Script", cursive;
+}
+.item {
+    width: 350px;
+    
+}
+.content {
+    text-align: center;
+}
 
 
 
@@ -226,6 +263,7 @@ footer p span {
         align-items: center;
         gap: 0px;
     }
+
     .bio-text {
         width: 65%;
     }
@@ -233,24 +271,25 @@ footer p span {
 }
 
 @media (max-width: 630px) {
- 
-     .bio-text {
+
+    .bio-text {
         width: 90%;
     }
 
     .bio-sec img {
-    width: 280px;
-    height: 230px;
+        width: 280px;
+        height: 230px;
     }
+
     .bio-text h2 {
         font-size: 26px;
     }
-    .bio-text p{
+
+    .bio-text p {
         font-size: 12px;
     }
-    .bio-sec{
-        
-    }
+
+    .bio-sec {}
 }
 
 

@@ -1,0 +1,465 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribute to Allama Iqbal</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;600&display=swap">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ===== HEADER SECTION ===== */
+    .head-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    .head-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 600px;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("assets/mainsec-img.jpg") no-repeat center center;
+      background-size: cover;
+      background-blend-mode: multiply;
+      z-index: 0;
+    }
+
+    .short-intro {
+      position: relative;
+      z-index: 1;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-left: 50px;
+      height: 40vh;
+      padding: 50px;
+    }
+
+    .short-intro h1 {
+      font-size: 50px;
+      font-family: "Dancing Script", cursive;
+    }
+
+    .short-intro h2:first-of-type {
+      font-size: 30px;
+      font-weight: 300;
+      padding-bottom: 6px;
+      color: rgb(240, 240, 233);
+    }
+
+    .short-intro .date {
+      font-size: 25px;
+      font-weight: 300;
+      color: rgb(240, 206, 9);
+    }
+
+    .short-intro p {
+      font-size: 20px;
+      width: 60%;
+      line-height: 1.5;
+    }
+
+    /* ===== MAIN SECTION ===== */
+    .main-section {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #101010;
+      color: #e0e0e0;
+      padding: 40px 0;
+    }
+
+    .main-section h1 {
+      font-family: "Dancing Script", cursive;
+      padding: 20px;
+      text-align: center;
+      font-size: 42px;
+      color: rgb(240, 206, 9);
+    }
+
+    /* ===== BIOGRAPHY SECTIONS ===== */
+    .bio-sec {
+      display: flex;
+      justify-content: center;
+      gap: 45px;
+      margin-bottom: 80px;
+    }
+
+    .bio-sec img {
+      width: 380px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 2px solid #292929;
+    }
+
+    .bio-sec .img {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .bio-sec .caption {
+      font-size: 14px;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    .bio-text {
+      width: 45%;
+      background-color: #2c2c2c;
+      border: 1px solid #444;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 60px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .bio-text h2 {
+      text-align: center;
+      font-family: "Dancing Script", cursive;
+      font-size: 32px;
+      color: rgb(240, 206, 9);
+      margin-bottom: 12px;
+    }
+
+    .bio-text p {
+      text-align: center;
+      line-height: 1.6;
+      font-size: 18px;
+      margin: 12px 0;
+      color: #fffcfc;
+    }
+
+    /* ====== COMMON WORKS SECTION HEADING ===== */
+    .works-section {
+      background-color: #101010;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .works-section h1 {
+      font-family: "Dancing Script", cursive;
+      font-size: 38px;
+      color: rgb(240, 206, 9);
+      margin-bottom: 30px;
+    }
+
+    /* ===== TIMELINE STYLE ===== */
+    .timeline {
+      position: relative;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 700px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 4px;
+      height: 100%;
+      background: rgb(240, 206, 9);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 40px 0;
+      width: 50%;
+      padding: 20px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+
+    .timeline-item .year {
+      font-size: 18px;
+      font-weight: bold;
+      color: rgb(240, 206, 9);
+      margin-bottom: 6px;
+    }
+
+    .timeline-item .content {
+      background: #2c2c2c;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .timeline-item h2 {
+      font-size: 20px;
+      color: rgb(240, 206, 9);
+    }
+
+    /* ===== CAROUSEL STYLE ===== */
+    .carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px;
+    }
+
+    .carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: rgb(240, 206, 9);
+      border-radius: 10px;
+    }
+
+    .work-slide {
+      flex: 0 0 auto;
+      background: #2c2c2c;
+      padding: 20px;
+      min-width: 250px;
+      border-radius: 12px;
+      scroll-snap-align: start;
+      text-align: center;
+      border: 1px solid #444;
+      transition: transform 0.3s ease;
+    }
+
+    .work-slide:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    }
+
+    .work-slide h2 {
+      font-size: 20px;
+      color: rgb(240, 206, 9);
+      margin-bottom: 8px;
+    }
+
+    /* ===== QUOTE STYLE ===== */
+    .quote-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 20px;
+    }
+
+    .quote-card {
+      background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .quote-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+    }
+
+    .quote-card blockquote {
+      font-size: 16px;
+      font-style: italic;
+      color: #ddd;
+      border-left: 4px solid rgb(240, 206, 9);
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    .quote-card h2 {
+      font-size: 18px;
+      color: rgb(240, 206, 9);
+      text-align: right;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #101010;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer .footer-top {
+      display: inline-block;
+      margin-top: 10px;
+      color: rgb(240, 206, 9);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer .footer-top:hover {
+      text-decoration: underline;
+    }
+
+    footer p span {
+      font-weight: bold;
+      font-family: cursive;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="head-section">
+      <div class="short-intro">
+        <h2>Poet Of East</h2>
+        <h1>ALLAMA MUHAMMAD IQBAL</h1>
+        <h2 class="date">1877 – 1938</h2>
+        <p>"Nations are born in the hearts of poets, they prosper and die in the hands of politicians."</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-section">
+      <h1>BIOGRAPHY</h1>
+
+      <!-- Example Bio Section -->
+      <div class="bio-sec">
+        <div class="bio-text early-sec">
+          <h2>Early Life</h2>
+          <p>Allama Iqbal was born on 9th November 1877 in Sialkot, Punjab.</p>
+          <p>He received his early education in Sialkot before moving to Lahore for higher studies.</p>
+        </div>
+        <div class="img">
+          <img src="assets/allama houxe.jpg" alt="Iqbal's birthplace">
+          <p class="caption">Iqbal’s birthplace in Sialkot</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Works Section 1: Timeline ===== -->
+    <section class="works-section">
+      <h1>Notable Works – Timeline</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="year">1915</div>
+          <div class="content">
+            <h2>Asrar-e-Khudi</h2>
+            <p>The Secrets of the Self</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">1923</div>
+          <div class="content">
+            <h2>Payam-e-Mashriq</h2>
+            <p>Message of the East</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">1924</div>
+          <div class="content">
+            <h2>Bang-e-Dra</h2>
+            <p>The Call of the Marching Bell</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="year">1927</div>
+          <div class="content">
+            <h2>Zabur-e-Ajam</h2>
+            <p>Persian Psalms</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Works Section 2: Carousel ===== -->
+    <section class="works-section">
+      <h1>Notable Works – Carousel</h1>
+      <div class="carousel">
+        <div class="work-slide">
+          <h2>Asrar-e-Khudi</h2>
+          <p>1915 – The Secrets of the Self</p>
+        </div>
+        <div class="work-slide">
+          <h2>Payam-e-Mashriq</h2>
+          <p>1923 – Message of the East</p>
+        </div>
+        <div class="work-slide">
+          <h2>Bang-e-Dra</h2>
+          <p>1924 – The Call of the Marching Bell</p>
+        </div>
+        <div class="work-slide">
+          <h2>Zabur-e-Ajam</h2>
+          <p>1927 – Persian Psalms</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Works Section 3: Quote Panels ===== -->
+    <section class="works-section">
+      <h1>Notable Works – Quote Style</h1>
+      <div class="quote-works">
+        <div class="quote-card">
+          <blockquote>
+            <p>“The Secrets of the Self”</p>
+          </blockquote>
+          <h2>Asrar-e-Khudi (1915)</h2>
+        </div>
+        <div class="quote-card">
+          <blockquote>
+            <p>“Message of the East”</p>
+          </blockquote>
+          <h2>Payam-e-Mashriq (1923)</h2>
+        </div>
+        <div class="quote-card">
+          <blockquote>
+            <p>“The Call of the Marching Bell”</p>
+          </blockquote>
+          <h2>Bang-e-Dra (1924)</h2>
+        </div>
+        <div class="quote-card">
+          <blockquote>
+            <p>“Persian Psalms”</p>
+          </blockquote>
+          <h2>Zabur-e-Ajam (1927)</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>Created with ❤️ as a tribute to Allama Muhammad Iqbal</p>
+      <p>&copy; 2025 Tribute Page | Designed by <span>Omaima Qasim</span> </p>
+      <a href="#top" class="footer-top">Back to Top ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
