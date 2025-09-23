@@ -1,3 +1,6 @@
+/* ===============================
+   1. GLOBAL STYLES
+   =============================== */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Playwrite+GB+J+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -8,10 +11,16 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* ===== HEADER SECTION ===== */
+h1 {
+    font-family: "Dancing Script", cursive;
+}
+
+/* ===============================
+   2. HEADER SECTION
+   =============================== */
 .head-section {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +78,9 @@
     line-height: 1.5;
 }
 
-/* ===== MAIN SECTION ===== */
+/* ===============================
+   3. MAIN SECTION
+   =============================== */
 .main-section {
     width: 100%;
     min-height: 100vh;
@@ -86,20 +97,20 @@
     color: rgb(240, 206, 9);
 }
 
-/* ===== BIOGRAPHY SECTIONS ===== */
+/* ===============================
+   4. BIOGRAPHY SECTIONS
+   =============================== */
 .bio-sec {
     display: flex;
     justify-content: center;
     gap: 45px;
     margin-bottom: 80px;
-    /* space between sections */
 }
 
 .bio-sec img {
     width: 380px;
     height: 300px;
     object-fit: cover;
-    /* keeps image proportional */
     border-radius: 15px;
     border: 2px solid #292929;
 }
@@ -141,50 +152,15 @@
 .bio-text p {
     text-align: center;
     line-height: 1.6;
-    /* better readability */
     font-size: 18px;
     margin: 12px 0;
     color: #fffcfc;
 }
 
-footer {
-    background-color: #101010;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    border-top: 1px solid #333;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer .footer-top {
-    display: inline-block;
-    margin-top: 10px;
-    color: rgb(240, 206, 9);
-    text-decoration: none;
-    font-weight: bold;
-
-}
-
-footer .footer-top:hover {
-    text-decoration: underline;
-}
-
-footer p span {
-    font-weight: bold;
-    font-family: cursive;
-}
-
-h1 {
-    font-family: "Dancing Script", cursive;
-}
-
-/* works section */
+/* ===============================
+   5. WORKS (TIMELINE SECTION)
+   =============================== */
 .work-sec {
-    border: solid yellow;
     min-height: 100vh;
     padding: 20px;
     background-color: #101010;
@@ -202,14 +178,12 @@ h1 {
 }
 
 .works {
-    border: solid yellow;
     width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 15px;
     position: relative;
-
 }
 
 .works::before {
@@ -221,29 +195,12 @@ h1 {
     height: 100%;
     background-color: rgb(240, 206, 9);
     transform: translateX(-50%);
-    
 }
 
-.works .item:nth-child(odd)  {
+.works .item:nth-child(odd) {
     text-align: end;
     position: relative;
     left: 30px;
-}
-
-
-.item h3,
-.content h2 {
-    color: rgb(240, 206, 9);
-}
-
-.item h3 {
-    font-weight: 400;
-    padding-bottom: 5px;
-}
-
-.content h2 {
-    font-family: "Dancing Script", cursive;
-    padding-bottom: 10px;
 }
 
 .item {
@@ -256,22 +213,75 @@ h1 {
     left: 50%;
 }
 
+.item h3,
+.content h2 {
+    color: rgb(240, 206, 9);
+}
+
+.item h3 {
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
 .content {
     text-align: center;
     padding: 10px;
     background-color: #2c2c2c;
     border: 1px solid #444;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3)
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
 }
 
+.content:hover {
+    box-shadow: 0px 0px 10px 1px rgb(240, 206, 9);
+    transform: scale(1.1);
+}
 
+.content h2 {
+    font-family: "Dancing Script", cursive;
+    padding-bottom: 10px;
+}
 
-/* media query for responsive */
+/* ===============================
+   6. FOOTER SECTION
+   =============================== */
+footer {
+    background-color: #101010;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
 
+footer p {
+    margin: 5px 0;
+}
+
+footer .footer-top {
+    display: inline-block;
+
+    color: rgb(240, 206, 9);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .footer-top:hover {
+    text-decoration: underline;
+}
+
+footer p span {
+    font-weight: bold;
+    font-family: cursive;
+}
+
+/* ===============================
+   7. MEDIA QUERIES
+   =============================== */
+
+/* max-width: 1220px */
 @media (max-width: 1220px) {
-
-
     .head-section::after {
         width: 370px;
     }
@@ -297,7 +307,6 @@ h1 {
     }
 
     .bio-text p {
-
         font-size: 14px;
     }
 
@@ -306,9 +315,9 @@ h1 {
     }
 }
 
+/* max-width: 930px */
 @media (max-width: 930px) {
     .bio-sec {
-
         flex-direction: column;
         align-items: center;
         gap: 0px;
@@ -317,11 +326,10 @@ h1 {
     .bio-text {
         width: 65%;
     }
-
 }
 
+/* max-width: 630px */
 @media (max-width: 630px) {
-
     .bio-text {
         width: 90%;
     }
@@ -338,14 +346,10 @@ h1 {
     .bio-text p {
         font-size: 12px;
     }
-
-    .bio-sec {}
 }
 
-
-
+/* max-width: 800px */
 @media (max-width: 800px) {
-
     .head-section {
         flex-direction: column;
         justify-content: flex-start;
@@ -386,4 +390,19 @@ h1 {
         margin: 0 auto;
     }
 
+    /* responsive works section */
+    .works {
+        align-items: center;
+        width: 0px;
+        padding: 10px 0px;
+    }
+
+    .works h1 {
+        font-size: 31px;
+    }
+
+    .item,
+    .works .item:nth-child(odd) {
+        left: 0px;
+    }
 }
